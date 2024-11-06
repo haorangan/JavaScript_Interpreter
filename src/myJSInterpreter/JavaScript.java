@@ -37,7 +37,6 @@ public class JavaScript {
         TokenScanner scanner = new TokenScanner(source);
         List<Token> tokens = scanner.scanTokens();
         TokenParser parser = new TokenParser(tokens);
-        System.out.println(tokens);
         List<Statement> statements = parser.parse();
         if (hadError) return;
         Resolver resolver = new Resolver(interpreter);
